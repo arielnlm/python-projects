@@ -79,7 +79,7 @@ def capture_video():
     while running:
         ret, frame = cap.read()
         if not ret:
-            continue
+            continue 
         
         result = DeepFace.analyze(frame, actions=['emotion'], enforce_detection=False)
         dominant_emotion = result[0]["dominant_emotion"]
